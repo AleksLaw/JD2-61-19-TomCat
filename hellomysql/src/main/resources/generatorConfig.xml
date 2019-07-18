@@ -23,6 +23,7 @@
         <table schema="hello_mysql" tableName="clients"/>
         <table schema="hello_mysql" tableName="products"/>
         <table schema="hello_mysql" tableName="orders"/>
+        <table schema="hello_mysql" tableName="client_feedback"/>
 
 
     </context>

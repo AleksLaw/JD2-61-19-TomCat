@@ -18,5 +18,6 @@
         <mapper resource="by/pvt/config/ClientsMapper.xml"/>
         <mapper resource="by/pvt/config/ProductsMapper.xml"/>
         <mapper resource="by/pvt/config/OrdersMapper.xml"/>
+        <mapper resource="by/pvt/config/ClientFeedbackMapper.xml"/>
     </mappers>
 </configuration>

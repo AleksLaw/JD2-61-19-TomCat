@@ -61,5 +61,16 @@
             )
         </sql>
     </changeSet>
+    <changeSet id="7" author="alve">
+        <sql>
+            create table `client_feedback` (
+            `id` integer not null,
+            `client_id` integer not null,
+            `product_id` integer not null,
+            `message` varchar(250) not null,
+            `post_date` timestamp not null
+            )
+        </sql>
+    </changeSet>
 
 </databaseChangeLog>
