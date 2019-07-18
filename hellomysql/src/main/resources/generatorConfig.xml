@@ -7,7 +7,7 @@
         <!-- Database Connection Information -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/hello_mysql?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false" userId="root"
-                        password="root"/>
+                        password="Kjuby789789987"/>
 
         <!--entity Entity class-->
         <javaModelGenerator targetPackage="by.pvt.dto" targetProject="src/main/java"/>

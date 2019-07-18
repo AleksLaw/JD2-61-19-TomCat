@@ -59,7 +59,7 @@
                             <changeLogFile>src/main/resources/changeLog.xml</changeLogFile>
                             <url>jdbc:mysql://localhost:3306/hello_mysql?createDatabaseIfNotExist=true&amp;useSSL=false</url>
                             <username>root</username>
-                            <password>root</password>
+                            <password>Kjuby789789987</password>
                             <driver>com.mysql.jdbc.Driver</driver>
                         </configuration>
                     </execution>
@@ -73,7 +73,7 @@
                             <changeLogFile>src/main/resources/changeLog.xml</changeLogFile>
                             <url>jdbc:mysql://localhost:3306/hello_mysql_junit?createDatabaseIfNotExist=true&amp;useSSL=false</url>
                             <username>root</username>
-                            <password>root</password>
+                            <password>Kjuby789789987</password>
                             <driver>com.mysql.jdbc.Driver</driver>
                         </configuration>
                     </execution>
