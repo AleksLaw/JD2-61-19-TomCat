@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/JD2-61-19-SQL.iml" filepath="$PROJECT_DIR$/.idea/JD2-61-19-SQL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hellomysql/hello-mysql.iml" filepath="$PROJECT_DIR$/hellomysql/hello-mysql.iml" />
+    </modules>
+  </component>
+</project>
