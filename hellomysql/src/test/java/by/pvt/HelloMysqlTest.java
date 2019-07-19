@@ -1,10 +1,6 @@
 package by.pvt;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 import org.dbunit.DBTestCase;
 import org.dbunit.PropertiesBasedJdbcDatabaseTester;
@@ -31,14 +27,14 @@ public class HelloMysqlTest extends DBTestCase {
     }
 
     @Test
-    public void testConnection() {
-
+    public void testConnection() throws Exception {
+Class.forName("com.mysql.jdbc.Driver");
         try (Connection connection =
                      DriverManager
-                             .getConnection("jdbc:mysql://localhost:3306/hello_mysql_junit", "root", "root");
-             PreparedStatement ps = connection.prepareStatement("select * from system_users");
+               .getConnection("jdbc:mysql://localhost:3306/hello_mysql_junit", "root", "Kjuby789789987");
+             Statement ps = connection.createStatement();
         ) {
-            ResultSet rs = ps.executeQuery();
+            ResultSet rs = ps.executeQuery("select * from system_users");
             assertNotNull(rs);
 
             int rawCount = 0;

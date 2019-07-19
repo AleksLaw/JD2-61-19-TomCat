@@ -34,8 +34,11 @@ public class ClientFeedbackServise {
 
     public List<ClientFeedback> selectAllFeedback() {
         SqlSession sqlSession = sqlSessionFactory.openSession();
+
         ClientFeedbackMapper dao = sqlSession.getMapper(ClientFeedbackMapper.class);
+
         List<ClientFeedback> list = dao.selectByExample(null);
+
         System.out.println("Feedback selected");
         sqlSession.close();
         return list;

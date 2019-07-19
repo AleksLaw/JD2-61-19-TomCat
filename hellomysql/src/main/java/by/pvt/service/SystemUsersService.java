@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import by.pvt.dto.SystemUsersExample;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -33,30 +34,40 @@ public class SystemUsersService {
         }
     }
 
-    public static void main(String[] args) {
-        SystemUsers systemUsers = new SystemUsers();
-        systemUsers.setId(2);
-        systemUsers.setUsername("User2");
-        systemUsers.setActive(false);
-        systemUsers.setDateofbirth(new Date());
+    public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
+        this.sqlSessionFactory = sqlSessionFactory;
+    }
 
-        new SystemUsersService().add(systemUsers);
+    public static void main(String[] args) {
+//        SystemUsers systemUsers = new SystemUsers();
+//        systemUsers.setId(2);
+//        systemUsers.setUsername("User2");
+//        systemUsers.setActive(false);
+//        systemUsers.setDateofbirth(new Date());
+//
+//        new SystemUsersService().add(systemUsers);
 
 
         SystemUsersService service
                 = new SystemUsersService();
-        service.getSystemUsers()
+        service.getSystemUsers(null)
+                .forEach(user ->
+                        log.info(user.getId() + " " + user.getUsername()));
+        SystemUsersExample systemUsersExample = new SystemUsersExample();
+        systemUsersExample.createCriteria().andActiveEqualTo(true);
+        log.info("run with example");
+        service.getSystemUsers(systemUsersExample)
                 .forEach(user ->
                         log.info(user.getId() + " " + user.getUsername()));
     }
 
-    public List<SystemUsers> getSystemUsers() {
+    public List<SystemUsers> getSystemUsers(SystemUsersExample systemUsersExample) {
         SqlSession session = sqlSessionFactory.openSession();
         SystemUsersMapper dao =
                 session.getMapper(SystemUsersMapper.class);
 
         List<SystemUsers> dtoUsers
-                = dao.selectByExample(null);
+                = dao.selectByExample(systemUsersExample);
 
         session.close();
         return dtoUsers;
