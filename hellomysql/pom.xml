@@ -52,11 +52,11 @@
             <artifactId>mybatis</artifactId>
             <version>3.5.1</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.ibatis</groupId>
-            <artifactId>ibatis-core</artifactId>
-            <version>3.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.ibatis</groupId>-->
+<!--            <artifactId>ibatis-core</artifactId>-->
+<!--            <version>3.0</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
