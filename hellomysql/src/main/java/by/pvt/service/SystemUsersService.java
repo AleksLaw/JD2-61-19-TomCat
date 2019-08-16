@@ -1,7 +1,6 @@
 package by.pvt.service;
 
 import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -50,11 +49,15 @@ public class SystemUsersService {
 
         SystemUsersService service
                 = new SystemUsersService();
+
         service.getSystemUsers(null)
                 .forEach(user ->
                         log.info(user.getId() + " " + user.getUsername()));
+
         SystemUsersExample systemUsersExample = new SystemUsersExample();
+
         systemUsersExample.createCriteria().andActiveEqualTo(true);
+
         log.info("run with example");
         service.getSystemUsers(systemUsersExample)
                 .forEach(user ->
